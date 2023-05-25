@@ -4,7 +4,7 @@ author: "Foad Sanjaran"
 ---
 
 
-*Data Wrangling:**
+*Data Wrangling:*
 
 # Code:
 
