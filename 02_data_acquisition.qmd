@@ -3,7 +3,7 @@ title: "Data Acquisition"
 author: "Foad Sanjaran"
 ---
 
-**Get data via an API & web scraping:**
+**Getting data via an API & web scraping:**
 
 # Code:
 

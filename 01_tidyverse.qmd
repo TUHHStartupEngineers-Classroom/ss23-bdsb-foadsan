@@ -3,7 +3,7 @@ title: "Tidyverse"
 author: "Foad Sanjaran"
 ---
 
-**Sales analysis:**
+**Sales analysis: This  analyzes the sales by location (state) with a bar plot. **
 
 Some business insights for bike sellers is created in this section. Two analyses based on two important categories (year and state) have been made.
 
@@ -62,14 +62,12 @@ sales_by_location_tbl <- bike_orderlines_wrangled_tbl %>%
                                      decimal.mark = ",", 
                                      prefix = "", 
                                      suffix = " €"))
-View(sales_by_location_tbl)
-
 
 
 sales_by_location_tbl %>%
   ggplot(aes(x = location, y = sales)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
-  geom_col(fill = "#2DC6D6") + 
+  geom_col(fill = "#6D8dD1") + 
   geom_label(aes(label = sales_text)) + 
   geom_smooth(method = "lm", se = FALSE) + 
   scale_y_continuous(labels = scales::dollar_format(big.mark = ".", 
@@ -94,7 +92,6 @@ sales_by_location_year_tbl <- bike_orderlines_wrangled_tbl %>%
                                      decimal.mark = ",", 
                                      prefix = "", 
                                      suffix = " €"))
-View(sales_by_location_year_tbl)
 
 
 sales_by_location_year_tbl %>%

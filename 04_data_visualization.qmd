@@ -1,13 +1,13 @@
 ---
 title: "Data Visualization"
-author: "Joschka Schwarz"
+author: "Foad Sanjaran"
 ---
 
 
 **Data Visualization:**
 
 # Code:
-
+## Mapping the time course of the cumulative Covid-19 cases
 ```{r}
 
 library(ggrepel)
@@ -72,15 +72,15 @@ map_data <- right_join(world, latest_data, by = c("region" = "location"))
 
 plot_data <- ggplot() +
   geom_map(data = map_data, map = map_data, aes(map_id = region, fill = mortality_rate),
-           color = "white", size = 0.1) +
+           color = "gray", size = 0.1) +
   expand_limits(x = world$long, y = world$lat) +
   scale_fill_gradient(low = "red", high = "black", name = "Mortality Rate",
                       labels = scales::percent_format()) +
   labs(title = "Confirmed COVID-19 deaths relative to the size of the population",
        subtitle = "Around 6.2 Million confirmed COVID-19 deaths worldwide") +
   theme_void() +
-  theme(plot.title = element_text(hjust = 0.5, size = 12, face = "bold"),
-        plot.subtitle = element_text(hjust = 0.5, size = 8),
+  theme(plot.title = element_text(hjust = 0.5, size = 14, face = "bold"),
+        plot.subtitle = element_text(hjust = 0.5, size = 10),
         legend.position = "right",
         legend.title.align = 0.5,
         legend.text = element_text(size = 8),
