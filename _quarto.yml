@@ -15,14 +15,13 @@ website:
       - text: "Journal"
         menu: 
           - text: "01 Tidyverse"
-            file: 01_tidyverse.qmd
+            file: content/01_journal/01_tidyverse.qmd
           - text: "02 Data Acquisition"
-            file: 02_data_acquisition.qmd
+            file: content/01_journal/02_data_acquisition.qmd
           - text: "03 Data Wrangling"
-            file: 03_data_wrangling.qmd
+            file: content/01_journal/03_data_wrangling.qmd
           - text: "04 Data Visualization"
-            file: 04_data_visualization.qmd
-
+            file: content/01_journal/04_data_visualization.qmd
 
 format:
   html:
